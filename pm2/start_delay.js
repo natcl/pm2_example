@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 
 const spawn = require('child_process').spawn;
-const exec = require('child_process').execSync;
-const os = require('os');
 
 var command;
-delay = parseInt(process.argv[2]) * 1000;
-program = process.argv[3];
+const delay = parseInt(process.argv[2]) * 1000;
+const program = process.argv[3];
+const args = process.argv.slice(4);
+const env = process.env;
+const cwd = process.cwd();
 
 setTimeout(function() {
-    command = spawn(program);
+    command = spawn(program, args, {cwd: cwd, env: env});
     command.stdout.on('data', (data) => {
       console.log(data.toString());
     });
