@@ -1,0 +1,26 @@
+{
+    "apps": [{
+        "name": "NodeJS",
+        "script": "../node/script.js",
+        "cwd": "../node",
+        "env": {
+            "MYVAR": "hello"
+        }
+    }, {
+        "name": "Python",
+        "script": "../python/script.py",
+        "cwd": "../python",
+        "env": {
+            "MYVAR": "hello"
+        }
+    }, {
+        "name": "Node-RED",
+        "script": "../node-red/node_modules/node-red/red.js",
+        "args": ["-v", "-u", "."],
+        "cwd": "../node-red",
+        "env": {
+            "MYVAR": "hello",
+            "PORT": 1885
+        }
+    }]
+}
