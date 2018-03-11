@@ -9,6 +9,7 @@
     }, {
         "name": "Python",
         "script": "../python/script.py",
+        "args": ["arg1", "arg2"],
         "cwd": "../python",
         "env": {
             "MYVAR": "hello"
