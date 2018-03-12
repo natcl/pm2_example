@@ -23,5 +23,15 @@
             "MYVAR": "hello",
             "PORT": 1885
         }
+    }, {
+        "name": "Reaper",
+        "script": "C:/Program Files/REAPER (x64)/reaper.exe",
+        "args": ["C:/Users/Nat/Desktop/pm2_example/reaper/monprojet.rpp"],
+        "cwd": "../reaper",
+		"restart_delay": 4000
+    }, {
+        "name": "Notepad",
+        "script": "start_delay.js",
+        "args": [4, "C:/Windows/System32/notepad.exe"],
     }]
 }
